@@ -68,6 +68,11 @@ RUN go get -u github.com/nsf/gocode \
 
 RUN mkdir -p ${GOPATH}/bin && curl https://glide.sh/get | sh
 
+# Install Node
+RUN curl -sL https://deb.nodesource.com/setup_6.x | bash && \
+    apt-get install -y --no-install-recommends nodejs
+RUN npm install -g tern js-beautify eslint
+
 # Install spacemacs
 RUN apt-get install -y --no-install-recommends emacs
 RUN git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
