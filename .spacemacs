@@ -303,7 +303,6 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
    (setq indent-tabs-mode nil) ; use space instead of tab
-   (my-setup-indent 2) ; indent 2 spaces width
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
