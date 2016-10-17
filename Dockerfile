@@ -49,10 +49,10 @@ RUN stack install apply-refact hlint stylish-haskell hasktags hoogle \
       intero hindent
 
 # Install basic Go stack
-RUN wget -q https://storage.googleapis.com/golang/go1.7.linux-amd64.tar.gz && \
-    tar -xf go1.7.linux-amd64.tar.gz && \
+RUN wget -q https://storage.googleapis.com/golang/go1.7.1.linux-amd64.tar.gz && \
+    tar -xf go1.7.1.linux-amd64.tar.gz && \
     mv go /usr/local && \
-    rm go1.7.linux-amd64.tar.gz
+    rm go1.7.1.linux-amd64.tar.gz
 RUN mkdir ${HOME}/.go
 ENV GOROOT=/usr/local/go
 ENV GOPATH=${HOME}/.go
