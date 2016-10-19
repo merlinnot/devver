@@ -60,7 +60,7 @@ ENV PATH="${GOPATH}/bin:${GOROOT}/bin:${PATH}"
 
 RUN go get -u github.com/nsf/gocode \
       github.com/rogpeppe/godef \
-      golang.org/x/tools/cmd/oracle \
+      golang.org/x/tools/cmd/guru \
       golang.org/x/tools/cmd/gorename \
       golang.org/x/tools/cmd/goimports \
       github.com/alecthomas/gometalinter && \

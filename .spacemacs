@@ -51,7 +51,7 @@ values."
      version-control
      (python :variables python-test-runner 'pytest)
      (c-c++ :variables c-c++-default-mode-for-headers 'c++-mode c-c++-enable-clang-support t)
-     (go :variables go-use-gometalinter t)
+     (go :variables go-use-gometalinter t go-tab-width 2)
      (haskell :variables haskell-completion-backend 'intero haskell-enable-hindent-style "johan-tibell")
      (javascript :variables javascript-disable-tern-port-files nil)
      )
