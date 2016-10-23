@@ -54,6 +54,8 @@ values."
      (go :variables go-use-gometalinter t go-tab-width 2)
      (haskell :variables haskell-completion-backend 'intero haskell-enable-hindent-style "johan-tibell")
      (javascript :variables javascript-disable-tern-port-files nil)
+     html
+     docker
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
