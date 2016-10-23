@@ -61,3 +61,12 @@ export PS1="\[\e[32m\]\t\[\e[m\]\`parse_git_branch\`\[\e[31m\]\`nonzero_return\`
 
 # The Fuck
 eval $(thefuck --alias f)
+
+# Spacemacs
+alias e=emacs
+
+###############################################################################
+# DEFAULTS
+
+# Start session in project directory
+cd /vagrant
