@@ -3,11 +3,10 @@
 
 # Specify Vagrant version and Vagrant API version
 Vagrant.require_version ">= 1.6.0"
-VAGRANTFILE_API_VERSION = "2"
 ENV['VAGRANT_DEFAULT_PROVIDER'] = 'docker'
 
 # Create and configure the Docker container
-Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+Vagrant.configure("2") do |config|
 
   # Assign a friendly name to this host VM
   config.vm.hostname = "dev"
