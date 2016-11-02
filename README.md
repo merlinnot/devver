@@ -9,7 +9,10 @@ It is meant to work with following languages:
 - JavaScript (Node.js 6.x.x)
 
 ### Installation
-Simply clone the repo with Vagrant and Docker installed and run:
+Simply copy Vagrantfile
+```curl -O https://raw.githubusercontent.com/merlinnot/dev/master/Vagrantfile```
+
+with Vagrant and Docker installed:
 ```bash
 $ (sudo) vagrant up
 $ (sudo) vagrant ssh
