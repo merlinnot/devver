@@ -18,6 +18,13 @@ Vagrant.configure("2") do |config|
   # Always use Vagrant's default insecure key
   config.ssh.insert_key = false
 
+  # Provision ssh keys and git configuration
+  config.vm.provision "file", source: "~/.ssh/id_rsa", destination: "/root/.ssh/id_rsa"
+  config.vm.provision "file", source: "~/.ssh/id_rsa.pub", destination: "/root/.ssh/id_rsa.pub"
+  config.vm.provision "file", source: "~/.ssh/known_hosts", destination: "/root/.ssh/known_hosts"
+  config.vm.provision "file", source: "~/.gitconfig", destination: "/root/.gitconfig"
+
+  # Docker provider
   config.vm.provider "docker" do |d|
     d.image = "merlinnot/dev"
     d.remains_running = true
