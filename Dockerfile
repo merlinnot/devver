@@ -132,7 +132,7 @@ RUN apt-get install -y --no-install-recommends unzip && \
       --usage-reporting=true \
       --path-update=true \
       --bash-completion=true \
-      --rc-path=${HOME}/.bashrc \
+      --rc-path=${HOME}/.profile \
       --additional-components \
         app-engine-python \
         app \
@@ -147,7 +147,7 @@ RUN apt-get install -y --no-install-recommends unzip && \
 
 # Apply custom bash settings
 COPY .bash_ext /root/.bash_ext
-RUN echo "source $HOME/.bash_ext" >> $HOME/.bashrc
+RUN echo "source $HOME/.bash_ext" >> $HOME/.profile
 
 ###############################################################################
 # SHRINKING IMAGE
