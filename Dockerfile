@@ -19,8 +19,7 @@ RUN apt-get -qq update && apt-get -qq upgrade -y -o \
       Dpkg::Options::="--force-confold"
 
 # Install essential tools
-RUN apt-get install -y --no-install-recommends vim nano git wget curl
-
+RUN apt-get install -y --no-install-recommends vim nano git wget curl unzip
 # Add insecure Vagrant key
 RUN rm -f /etc/service/sshd/down && /usr/sbin/enable_insecure_key
 RUN /etc/my_init.d/00_regen_ssh_host_keys.sh
@@ -100,6 +99,13 @@ RUN go get -u \
     gometalinter --install
 
 RUN mkdir -p ${GOPATH}/bin && curl https://glide.sh/get | sh
+
+# Install goappengine
+RUN wget -q https://storage.googleapis.com/appengine-sdks/featured/go_appengine_sdk_linux_amd64-1.9.46.zip -O /tmp/sdk.zip
+RUN mkdir -p /usr/local
+RUN cd /usr/local && unzip /tmp/sdk.zip > /dev/null && rm /tmp/sdk.zip
+ENV PATH $PATH:/usr/local/go_appengine
+RUN go get google.golang.org/appengine
 
 # Install Node
 RUN curl -sL https://deb.nodesource.com/setup_6.x | bash && \
