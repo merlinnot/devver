@@ -78,7 +78,7 @@ RUN stack install \
       hindent
 
 # Install basic Go stack
-RUN GO_VERSION="1.7.1" && \
+RUN GO_VERSION="1.7.3" && \
     GO_BASE_URL="https://storage.googleapis.com/golang/" && \
     wget -q ${GO_BASE_URL}go${GO_VERSION}.linux-amd64.tar.gz && \
     tar -xf go${GO_VERSION}.linux-amd64.tar.gz && \
@@ -98,22 +98,36 @@ RUN go get -u \
       github.com/alecthomas/gometalinter && \
     gometalinter --install
 
-RUN mkdir -p ${GOPATH}/bin && curl https://glide.sh/get | sh
+RUN mkdir -p "${GOPATH}/bin" && curl https://glide.sh/get | sh
 
-# Install goappengine
-RUN wget -q https://storage.googleapis.com/appengine-sdks/featured/go_appengine_sdk_linux_amd64-1.9.46.zip -O /tmp/sdk.zip
-RUN mkdir -p /usr/local
-RUN cd /usr/local && unzip /tmp/sdk.zip > /dev/null && rm /tmp/sdk.zip
-ENV PATH $PATH:/usr/local/go_appengine
+# Install Google App Engine SDK for Go
+ENV GO_APPENGINE_VERSION="1.9.46"
+ENV GO_APPENGINE_URL="https://storage.googleapis.com/appengine-sdks/featured/"
+ENV GO_APPENGINE_FILE="go_appengine_sdk_linux_amd64-${GO_APPENGINE_VERSION}.zip"
+RUN wget -q \
+      "${GO_APPENGINE_URL}${GO_APPENGINE_FILE}" \
+      -O /tmp/sdk.zip
+RUN unzip -qq /tmp/sdk.zip -d "${HOME}" && \
+    rm /tmp/sdk.zip && \
+    mv "${HOME}/go_appengine" "${HOME}/.go_appengine"
+ENV PATH="${PATH}:/usr/local/.go_appengine"
 RUN go get google.golang.org/appengine
 
 # Install Node
-RUN curl -sL https://deb.nodesource.com/setup_6.x | bash && \
+RUN curl -sL https://deb.nodesource.com/setup_7.x | bash && \
     apt-get install -y --no-install-recommends nodejs
 RUN npm install -g \
       tern \
       js-beautify \
       eslint
+
+# Install Yarn
+RUN curl https://dl.yarnpkg.com/debian/pubkey.gpg | \
+    apt-key add - && \
+    echo "deb http://dl.yarnpkg.com/debian/ stable main" | \
+    tee /etc/apt/sources.list.d/yarn.list && \
+    apt-get update && \
+    apt-get install yarn
 
 ###############################################################################
 # COMMAND-LINE FRAMEWORKS,  TOOLKITS, EDITORS $ OPTIONS
@@ -150,6 +164,9 @@ RUN apt-get install -y --no-install-recommends unzip && \
         cloud-datastore-emulator \
         app-engine-go \
         bigtable
+
+# Install ngrok
+RUN apt-get install ngrok-client
 
 # Apply custom bash settings
 COPY .bash_ext /root/.bash_ext
