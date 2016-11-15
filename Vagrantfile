@@ -15,6 +15,12 @@ Vagrant.configure("2") do |config|
   # Use root, it is a development environment anyway.
   config.ssh.username = "root"
 
+  # Since we have all the powers of a root user, make it easy
+  # to edit files on our host machine.
+  config.vm.synced_folder ".", "/vagrant/",
+    user: ENV['USER'],
+    group: ENV['USER']
+
   # Always use Vagrant's default insecure key
   config.ssh.insert_key = false
 
@@ -24,11 +30,16 @@ Vagrant.configure("2") do |config|
   config.vm.provision "file", source: "~/.ssh/known_hosts", destination: "/root/.ssh/known_hosts"
   config.vm.provision "file", source: "~/.gitconfig", destination: "/root/.gitconfig"
 
+  # Forwarding ports with auto-correction
+  config.vm.network "forwarded_port", guest: 3000, host: 3000, auto_correct: true
+  config.vm.network "forwarded_port", guest: 8080, host: 8080, auto_correct: true
+  config.vm.network "forwarded_port", guest: 8081, host: 8081, auto_correct: true
+  config.vm.network "forwarded_port", guest: 8082, host: 8082, auto_correct: true
+
   # Docker provider
   config.vm.provider "docker" do |d|
     d.image = "merlinnot/dev"
     d.remains_running = true
     d.has_ssh = true
-    d.ports = ["8081:8081", "8082:8082", "8083:8083"]
   end
 end
