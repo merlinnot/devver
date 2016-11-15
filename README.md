@@ -24,10 +24,10 @@ update any files in your projects while Dev evolves.
 - GNU Compiler Collection v5.4.0 20160609
 - Clang v3.8.0-2ubuntu4
 - Go v1.7.3
-- The Glorious Glasgow Haskell Compilation System, v8.0.1
+- The Glorious Glasgow Haskell Compilation System v8.0.1
 - Node.js v7.1.0
 - Perl v5.22.1
-- GNU bash, v4.3.46
+- GNU bash v4.3.46
 
 ### Frameworks, libraries and language-specific tools
 
@@ -35,7 +35,7 @@ C++:
 - [Boost v1.62.0](http://www.boost.org)
 
 Haskell:
-- [Stack v1.2.0](https://docs.haskellstack.org/en/stable/README/)
+- [Stack](https://docs.haskellstack.org/en/stable/README/)
 - [apply-refact](https://hackage.haskell.org/package/apply-refact)
 - [hlint](https://hackage.haskell.org/package/hlint)
 - [stylish-haskell](https://hackage.haskell.org/package/stylish-haskell)
@@ -56,17 +56,31 @@ Go:
 - [Goole App Engine package](google.golang.org/appengine)
 
 JavaScript:
-- [Tern v0.20](https://ternjs.net)
-- [JS Beautifier v1.6.4](https://github.com/beautify-web/js-beautify)
-- [ESLint v3.10.0](http://eslint.org)
-- [Yarn v0.16.1](https://github.com/yarnpkg/yarn)
+- [Tern](https://ternjs.net)
+- [JS Beautifier](https://github.com/beautify-web/js-beautify)
+- [ESLint](http://eslint.org)
+- [Yarn](https://github.com/yarnpkg/yarn)
 
 ### Command line tools and programs
-- [GNU Emacs 24.5.1](https://www.gnu.org/software/emacs/)
-- [Spacemacs v0.200.5](http://spacemacs.org)
-- [Google Cloud SDK 134.0.0](https://cloud.google.com/sdk/)
-- [Ngrok v1.6](https://ngrok.com)
-- [The Fuck v3.11](https://github.com/nvbn/thefuck)
+- [GNU Emacs](https://www.gnu.org/software/emacs/)
+- [Spacemacs](http://spacemacs.org)
+- [Google Cloud SDK](https://cloud.google.com/sdk/)
+- [Google App Engine Go](https://cloud.google.com/sdk/)
+- [Google BigQuery Command Line Tool](https://cloud.google.com/sdk/)
+- [Google BigQuery Command Line Tool](https://cloud.google.com/sdk/)
+- [Google Cloud Bigtable emulator](https://cloud.google.com/sdk/)
+- [Google Cloud Datastore Emulator](https://cloud.google.com/sdk/)
+- [Google Cloud Datastore Emulator (Legacy)](https://cloud.google.com/sdk/)
+- [Google Cloud Pub/Sub Emulator](https://cloud.google.com/sdk/)
+- [Google Cloud SDK Core Libraries (Platform Specific)](https://cloud.google.com/sdk/)
+- [Google Cloud Storage Command Line Tool](https://cloud.google.com/sdk/)
+- [Default set of gcloud commands](https://cloud.google.com/sdk/)
+- [gcloud Alpha Commands](https://cloud.google.com/sdk/)
+- [gcloud Beta Commands](https://cloud.google.com/sdk/)
+- [gcloud app Python Extensions](https://cloud.google.com/sdk/)
+- [kubectl](http://kubernetes.io/docs/user-guide/kubectl-overview/)
+- [Ngrok](https://ngrok.com)
+- [The Fuck](https://github.com/nvbn/thefuck)
 
 ### Tips and tricks
 - "e" is an alias for Spacemacs, i.e. `e package.json`
