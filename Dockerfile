@@ -110,7 +110,7 @@ RUN wget -q \
 RUN unzip -qq /tmp/sdk.zip -d "${HOME}" && \
     rm /tmp/sdk.zip && \
     mv "${HOME}/go_appengine" "${HOME}/.go_appengine"
-ENV PATH="${PATH}:/usr/local/.go_appengine"
+ENV PATH="${PATH}:/root/.go_appengine"
 RUN go get google.golang.org/appengine
 
 # Install Node
