@@ -1,7 +1,7 @@
 # Dev
 Dev is a fully flavoured development environment based on Vagrant and Docker.
 Editor of choice is Spacemacs which is set up and ready to serve you well
-with all supported languages and frameworks. Carefully selected tools allow 
+with all supported languages and frameworks. Carefully selected tools allow
 you to code, debug and share your environment easily.
 
 ### Quickstart
@@ -60,6 +60,7 @@ JavaScript:
 - [JS Beautifier](https://github.com/beautify-web/js-beautify)
 - [ESLint](http://eslint.org)
 - [Yarn](https://github.com/yarnpkg/yarn)
+- [Polymer CLI](https://www.polymer-project.org/)
 
 ### Command line tools and programs
 - [GNU Emacs](https://www.gnu.org/software/emacs/)

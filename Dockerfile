@@ -119,7 +119,8 @@ RUN curl -sL https://deb.nodesource.com/setup_7.x | bash && \
 RUN npm install -g \
       tern \
       js-beautify \
-      eslint
+      eslint \
+      polymer-cli
 
 # Install Yarn
 RUN curl https://dl.yarnpkg.com/debian/pubkey.gpg | \
@@ -130,7 +131,7 @@ RUN curl https://dl.yarnpkg.com/debian/pubkey.gpg | \
     apt-get install yarn
 
 ###############################################################################
-# COMMAND-LINE FRAMEWORKS,  TOOLKITS, EDITORS $ OPTIONS
+# COMMAND-LINE PROGRAMS, TOOLKITS, EDITORS AND OPTIONS
 
 # Install spacemacs
 RUN apt-get install -y --no-install-recommends emacs
