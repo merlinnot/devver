@@ -1,8 +1,8 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-# Specify Vagrant version and Vagrant API version
-Vagrant.require_version ">= 1.6.0"
+# Specify Vagrant version
+Vagrant.require_version ">= 1.8.7"
 ENV['VAGRANT_DEFAULT_PROVIDER'] = 'docker'
 
 # Create and configure the Docker container
@@ -17,9 +17,10 @@ Vagrant.configure("2") do |config|
 
   # Since we have all the powers of a root user, make it easy
   # to edit files on our host machine.
+  config.nfs.map_uid = ENV['UID']
+  config.nfs.map_gid = ENV['GROUPS']
   config.vm.synced_folder ".", "/vagrant/",
-    user: ENV['USER'],
-    group: ENV['USER']
+    nfs: true
 
   # Always use Vagrant's default insecure key
   config.ssh.insert_key = false
@@ -41,5 +42,6 @@ Vagrant.configure("2") do |config|
     d.image = "merlinnot/dev"
     d.remains_running = true
     d.has_ssh = true
+    d.privileged = true
   end
 end
