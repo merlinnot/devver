@@ -1,0 +1,11 @@
+# -*-dockerfile-*-
+
+# Install spacemacs
+RUN apt-get install -y --no-install-recommends emacs
+RUN git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+
+# Copy configuration file
+COPY .spacemacs /root/.spacemacs
+
+# Install packages
+RUN emacs -nw -batch -u "${UNAME}" -q -kill

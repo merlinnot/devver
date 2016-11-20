@@ -1,0 +1,24 @@
+# -*-dockerfile-*-
+
+# Install gcloud toolkit
+RUN apt-get install -y --no-install-recommends unzip && \
+    wget -q https://dl.google.com/dl/cloudsdk/channels/rapid/google-cloud-sdk.zip && \
+    unzip -q google-cloud-sdk.zip && \
+    mv ./google-cloud-sdk ${HOME}/.google-cloud-sdk && \
+    rm -r google-cloud-sdk* && \
+    ${HOME}/.google-cloud-sdk/install.sh \
+      --usage-reporting=true \
+      --path-update=true \
+      --bash-completion=true \
+      --rc-path=${HOME}/.profile \
+      --additional-components \
+        app-engine-python \
+        app \
+        kubectl \
+        alpha \
+        beta \
+        gcd-emulator \
+        pubsub-emulator \
+        cloud-datastore-emulator \
+        app-engine-go \
+        bigtable

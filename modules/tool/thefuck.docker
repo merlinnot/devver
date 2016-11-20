@@ -1,0 +1,5 @@
+# -*-dockerfile-*-
+
+# Install The Fuck
+# See .bash_ext for alias configuration
+RUN pip3 install thefuck

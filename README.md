@@ -86,3 +86,11 @@ JavaScript:
 ### Tips and tricks
 - "e" is an alias for Spacemacs, i.e. `e package.json`
 - Use f if you've screwed up and want to use The Fuck
+
+### Development
+Dockerfile is composed of files in `./modules` directory. Composing
+is made using m4 macro processor. All files included in Dockerfile
+must be registered in Dockerfile.m4.
+
+Use `make dockerfile` to compose Dockerfile, `make build` to build
+an image.

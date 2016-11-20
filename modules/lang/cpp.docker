@@ -1,0 +1,20 @@
+# -*-dockerfile-*-
+
+RUN apt-get install -y --no-install-recommends \
+      build-essential \
+      clang
+RUN BOOST_MAJOR=1 && \
+    BOOST_MINOR=62 && \
+    BOOST_PATCH=0 && \
+    BOOST_BASE_URL="http://sourceforge.net/projects/boost/files/boost/" && \
+    BOOST_VERSION_DIR="${BOOST_MAJOR}.${BOOST_MINOR}.${BOOST_PATCH}/" && \
+    BOOST_PKG="boost_${BOOST_MAJOR}_${BOOST_MINOR}_${BOOST_PATCH}.tar.bz2" && \
+    wget -c \
+      "${BOOST_BASE_URL}${BOOST_VERSION_DIR}${BOOST_PKG}/download" \
+      --directory-prefix=/tmp/boost/ && \
+    mkdir /tmp/boost/extracted && \
+    tar -xf /tmp/boost/download -C /tmp/boost/extracted/ && \
+    cd /tmp/boost/extracted/boost_1_${BOOST_MINOR}_0 && \
+    ./bootstrap.sh --prefix=/usr/local/ && \
+    ./b2 -d0 install && \
+    rm -r /tmp/boost
