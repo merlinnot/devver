@@ -1,20 +1,21 @@
 # Dev
-Dev is a fully flavoured development environment based on Vagrant and Docker.
-Editor of choice is Spacemacs which is set up and ready to serve you well
-with all supported languages and frameworks. Carefully selected tools allow
-you to code, debug and share your environment easily.
+Dev is a fully flavoured development environment based on Docker.
+Editors of choice are VS Code and Spacemacs which are set up and ready
+to serve you well with all supported languages and frameworks. 
+Carefully selected tools allow you to code, debug and share
+your environment easily.
 
 ### Quickstart
 ```bash
 cd your/project/path
-curl -O https://raw.githubusercontent.com/merlinnot/dev/master/Vagrantfile
-vagrant up
-vagrant ssh
+curl -O https://raw.githubusercontent.com/merlinnot/dev/master/docker-compose.yml
+docker-compose up -d
+docker-compose exec dev [command]
 ```
-Aforementioned commands copies latest Vagrantfile into your project, which
+Aforementioned commands copies latest docker-compose file into your project,
 which should be then redistributed with the project, then it sets up and
 connects you to newly created container. Most of configuration is pushed
-directly to Docker Hub container registry, therefore thre's no need to
+directly to Docker Hub container registry, therefore there's no need to
 update any files in your projects while Dev evolves.
 
 ### Languages
@@ -83,6 +84,34 @@ JavaScript:
 - [Ngrok](https://ngrok.com)
 - [The Fuck](https://github.com/nvbn/thefuck)
 
+### X-Apps
+- [Visual Studio Code](https://code.visualstudio.com/)  
+  Plugins:  
+    - [change-case](https://marketplace.visualstudio.com/items?itemName=wmaurer.change-case)
+    - [Git Blame](https://marketplace.visualstudio.com/items?itemName=waderyan.gitblame)
+    - [VSCode Dimmer](https://marketplace.visualstudio.com/items?itemName=hoovercj.vscode-dimmer)
+    - [Color Highlight](https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight)
+
 ### Tips and tricks
 - "e" is an alias for Spacemacs, i.e. `e package.json`
 - Use f if you've screwed up and want to use The Fuck
+
+### Development
+Dockerfile is composed of files in `./modules` directory. Composing
+is made using m4 macro processor. All files included in Dockerfile
+must be registered in Dockerfile.m4.
+
+Use `make dockerfile` to compose Dockerfile, `make build` to build
+an image.
+
+### Troubleshooting
+
+##### No protocol specified
+```
+No protocol specified
+rqt: cannot connect to X server unix:0
+```
+Solution: 
+```
+$ xhost +local:root
+```

@@ -1,0 +1,37 @@
+# -*-dockerfile-*-
+
+# Install Go
+RUN GO_VERSION="1.7.3" && \
+    GO_BASE_URL="https://storage.googleapis.com/golang/" && \
+    wget -q ${GO_BASE_URL}go${GO_VERSION}.linux-amd64.tar.gz && \
+    tar -xf go${GO_VERSION}.linux-amd64.tar.gz && \
+    mv go /usr/local && \
+    rm go${GO_VERSION}.linux-amd64.tar.gz
+RUN mkdir ${HOME}/.go
+ENV GOROOT=/usr/local/go
+ENV GOPATH=/root/.go
+ENV PATH="${GOPATH}/bin:${GOROOT}/bin:${PATH}"
+
+# Install essential packages
+RUN go get -u \
+      github.com/nsf/gocode \
+      github.com/rogpeppe/godef \
+      golang.org/x/tools/cmd/guru \
+      golang.org/x/tools/cmd/gorename \
+      golang.org/x/tools/cmd/goimports \
+      github.com/alecthomas/gometalinter && \
+    gometalinter --install
+
+# Install Google App Engine SDK for Go
+ENV GO_APPENGINE_VERSION="1.9.46"
+ENV GO_APPENGINE_URL="https://storage.googleapis.com/appengine-sdks/featured/"
+ENV GO_APPENGINE_FILE="go_appengine_sdk_linux_amd64-${GO_APPENGINE_VERSION}.zip"
+RUN wget -q \
+      "${GO_APPENGINE_URL}${GO_APPENGINE_FILE}" \
+      -O /tmp/sdk.zip
+RUN unzip -qq /tmp/sdk.zip -d "${HOME}" && \
+    rm /tmp/sdk.zip && \
+    mv "${HOME}/go_appengine" "${HOME}/.go_appengine"
+ENV PATH="${PATH}:/root/.go_appengine"
+RUN go get google.golang.org/appengine
+

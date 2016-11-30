@@ -1,0 +1,12 @@
+# -*-dockerfile-*-
+
+FROM phusion/baseimage:latest
+
+MAINTAINER Natan Sągol <m@merlinnot.com>
+
+# Use baseimage-docker's init system.
+CMD ["/sbin/my_init"]
+
+# Update image
+RUN apt-get -qq update && apt-get -qq upgrade -y -o \
+      Dpkg::Options::="--force-confold"

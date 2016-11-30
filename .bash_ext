@@ -69,4 +69,4 @@ alias e=emacs
 # DEFAULTS
 
 # Start session in project directory
-cd /vagrant
+cd /code

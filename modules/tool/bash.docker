@@ -1,0 +1,9 @@
+# -*-dockerfile-*-
+
+# Apply custom bash settings
+COPY .bash_ext /root/.bash_ext
+RUN echo "source $HOME/.bash_ext" > $HOME/.profile
+
+# Source profile
+RUN echo "source $HOME/.profile" >> $HOME/.bashrc
+    

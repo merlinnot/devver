@@ -1,0 +1,14 @@
+# -*-dockerfile-*-
+
+RUN apt-get install -y --no-install-recommends libtinfo-dev
+ENV PATH="${HOME}/.local/bin:${PATH}"
+RUN curl -sSLq https://get.haskellstack.org/ | sh
+RUN stack setup
+RUN stack install \
+      apply-refact \
+      hlint \
+      stylish-haskell \
+      hasktags \
+      hoogle \
+      intero \
+      hindent

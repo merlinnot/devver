@@ -1,0 +1,17 @@
+version: '2'
+services:
+  dev:
+    container_name: dev
+    environment:
+      - DISPLAY=${DISPLAY}
+    image: merlinnot/dev
+    ports:
+      - "3000:3000"
+      - "8080:8080"
+      - "8081:8081"
+      - "8082:8082"
+      - "14500:14500"
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - .:/code
+      - /private/tmp/com.apple.launchd.411CkXunMM/

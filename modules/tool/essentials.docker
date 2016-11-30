@@ -1,0 +1,9 @@
+# -*-dockerfile-*-
+
+RUN apt-get install -y --no-install-recommends vim nano git wget curl unzip
+# Add insecure Vagrant key
+RUN rm -f /etc/service/sshd/down && /usr/sbin/enable_insecure_key
+RUN /etc/my_init.d/00_regen_ssh_host_keys.sh
+RUN mkdir -p /root/.ssh && curl -sL \
+      https://raw.githubusercontent.com/mitchellh/vagrant/master/keys/vagrant.pub \
+      > /root/.ssh/authorized_keys
