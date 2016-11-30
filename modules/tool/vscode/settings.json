@@ -24,5 +24,6 @@
   "dimmer.context": 0,
   "dimmer.delay": 0,
   "dimmer.when": "always",
-  "git.confirmSync": false
+  "git.confirmSync": false,
+  "editor.fontFamily": "Iosevka"
 }

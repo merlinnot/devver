@@ -1,0 +1,9 @@
+# -*-dockerfile-*-
+
+RUN VERSION="1.9.6" && \
+    URL_BASE="https://github.com/be5invis/Iosevka/releases/download/" && \
+    wget -q "${URL_BASE}v${VERSION}/01.iosevka-${VERSION}.zip" \
+      -O /tmp/iosevka.zip && \
+    unzip /tmp/iosevka.zip -d /root/.fonts && \
+    fc-cache -f -v && \
+    rm /tmp/iosevka.zip

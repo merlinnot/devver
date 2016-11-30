@@ -20,6 +20,7 @@ include(tool/thefuck.docker)
 include(tool/gcloud.docker)
 include(tool/bash.docker)
 include(tool/vscode/vscode.docker)
+include(tool/iosevka.docker)
 
 # Shrinking image
 include(shrink.docker)
