@@ -7,10 +7,10 @@ your environment easily.
 
 ### Quickstart
 ```bash
-cd your/project/path
-curl -O https://raw.githubusercontent.com/merlinnot/dev/master/docker-compose.yml
-docker-compose up -d
-docker-compose exec dev [command]
+$ cd your/project/path
+$ curl -O https://raw.githubusercontent.com/merlinnot/dev/master/docker-compose.yml
+$ docker-compose up -d
+$ docker-compose exec dev [command]
 ```
 Aforementioned commands copies latest docker-compose file into your project,
 which should be then redistributed with the project, then it sets up and
@@ -87,10 +87,27 @@ JavaScript:
 ### X-Apps
 - [Visual Studio Code](https://code.visualstudio.com/)  
   Plugins:  
-    - [change-case](https://marketplace.visualstudio.com/items?itemName=wmaurer.change-case)
-    - [Git Blame](https://marketplace.visualstudio.com/items?itemName=waderyan.gitblame)
-    - [VSCode Dimmer](https://marketplace.visualstudio.com/items?itemName=hoovercj.vscode-dimmer)
-    - [Color Highlight](https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight)
+    - [Auto Rename Tag v0.0.8](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
+    - [change-case v1.0.0](https://marketplace.visualstudio.com/items?itemName=wmaurer.change-case) 
+    - [Color Highlight v1.2.1](https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight)
+    - [ESLint v1.1.0](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+    - [Git Blame v1.3.0](https://marketplace.visualstudio.com/items?itemName=waderyan.gitblame)
+    - [Git History v0.1.2](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory)
+    - [gitignore v0.4.0](https://marketplace.visualstudio.com/items?itemName=codezombiech.gitignore)
+    - [HTML Snippets v0.0.18](https://marketplace.visualstudio.com/items?itemName=abusaidm.html-snippets)
+    - [Image Preview v0.5.1](https://marketplace.visualstudio.com/items?itemName=buzzfrog.imagepreview)
+    - [JavaScript (ES6) snippets v1.2.0](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets)
+    - [JavaScript Snippet pack v0.1.5](https://marketplace.visualstudio.com/items?itemName=akamud.vscode-javascript-snippet-pack)
+    - [npm v0.1.2](https://marketplace.visualstudio.com/items?itemName=eg2.vscode-npm-script)
+    - [npm Intellisense v0.1.4](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense)
+    - [Path Intellisense v1.1.0](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
+    - [React Redux ES6 Snippets v2.0.2](https://marketplace.visualstudio.com/items?itemName=timothymclane.react-redux-es6-snippets)
+    - [Reactjs code snippets v1.2.0](https://marketplace.visualstudio.com/items?itemName=xabikos.ReactSnippets)
+    - [Relative Path v0.11.0](https://marketplace.visualstudio.com/items?itemName=jakob101.RelativePath)
+    - [REST Client v0.11.0](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
+    - [Sass v1.2.1](https://marketplace.visualstudio.com/items?itemName=robinbentley.sass-indented)
+    - [SVG Viewer v1.2.0](https://marketplace.visualstudio.com/items?itemName=cssho.vscode-svgviewer)
+    - [VSCode Dimmer v2.1.0](https://marketplace.visualstudio.com/items?itemName=hoovercj.vscode-dimmer)
 
 ### Tips and tricks
 - "e" is an alias for Spacemacs, i.e. `e package.json`

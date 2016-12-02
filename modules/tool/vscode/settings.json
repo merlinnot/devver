@@ -1,7 +1,6 @@
 {
-  "editor.acceptSuggestionOnEnter": false,
   "editor.cursorBlinking": "phase",
-  "editor.cursorStyle": "underline",
+  "editor.cursorStyle": "line",
   "editor.fontSize": 16,
   "editor.rulers": [80, 120],
   "editor.snippetSuggestions": "top",
@@ -25,5 +24,6 @@
   "dimmer.delay": 0,
   "dimmer.when": "always",
   "git.confirmSync": false,
-  "editor.fontFamily": "Iosevka"
+  "editor.fontFamily": "Iosevka",
+  "editor.fontLigatures": true
 }
