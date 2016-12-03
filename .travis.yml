@@ -1,0 +1,17 @@
+sudo: required
+
+services:
+  - docker
+  
+script:
+  - m4 -I modules Dockerfile.m4 > Dockerfile
+  - travis_wait 90 docker build -t merlinnot/dev:latest .
+ 
+after_success:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+    docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+    docker push merlinnot/dev:latest;
+    fi
+
+notifications:
+  email: true
