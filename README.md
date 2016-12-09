@@ -1,4 +1,4 @@
-# Dev
+# Dev [![CircleCI](https://circleci.com/gh/merlinnot/dev/tree/master.svg?style=svg)](https://circleci.com/gh/merlinnot/dev/tree/master)
 Dev is a fully flavoured development environment based on Docker.
 Editors of choice are VS Code and Spacemacs which are set up and ready
 to serve you well with all supported languages and frameworks. 
