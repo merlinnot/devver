@@ -11,6 +11,7 @@ dependencies:
     - m4 -I modules Dockerfile.m4 > Dockerfile
     - if [[ -e ~/docker/image.tar ]]; then docker load -i ~/docker/image.tar; fi
     - docker build --rm=false -t merlinnot/dev .
+        timeout: 7200
     - mkdir -p ~/docker; docker save merlinnot/dev > ~/docker/image.tar
 
 deployment:
