@@ -14,6 +14,13 @@ dependencies:
         timeout: 7200
     - mkdir -p ~/docker; docker save merlinnot/dev > ~/docker/image.tar
 
+test:
+  pre:
+    - sudo apt-get update; sudo apt-get install bats docker-compose
+    - docker-compose up -d
+  override:
+    - bats tests
+
 deployment:
   hub:
     branch: master
