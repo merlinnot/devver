@@ -23,13 +23,13 @@ RUN go get -u \
     gometalinter --install
 
 # Install Google App Engine SDK for Go
-ENV GO_APPENGINE_VERSION="1.9.46"
-ENV GO_APPENGINE_URL="https://storage.googleapis.com/appengine-sdks/featured/"
-ENV GO_APPENGINE_FILE="go_appengine_sdk_linux_amd64-${GO_APPENGINE_VERSION}.zip"
-RUN wget -q \
+RUN GO_APPENGINE_VERSION="1.9.46" && \
+    GO_APPENGINE_URL="https://storage.googleapis.com/appengine-sdks/featured/" && \
+    GO_APPENGINE_FILE="go_appengine_sdk_linux_amd64-${GO_APPENGINE_VERSION}.zip" && \
+    wget -q \
       "${GO_APPENGINE_URL}${GO_APPENGINE_FILE}" \
-      -O /tmp/sdk.zip
-RUN unzip -qq /tmp/sdk.zip -d "${HOME}" && \
+      -O /tmp/sdk.zip && \
+    unzip -qq /tmp/sdk.zip -d "${HOME}" && \
     rm /tmp/sdk.zip && \
     mv "${HOME}/go_appengine" "${HOME}/.go_appengine"
 ENV PATH="${PATH}:/root/.go_appengine"
