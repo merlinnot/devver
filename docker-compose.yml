@@ -13,3 +13,4 @@ services:
       - "14500:14500"
     volumes:
       - .:/code
+      - /tmp/.X11-unix:/tmp/.X11-unix
