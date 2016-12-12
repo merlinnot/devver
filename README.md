@@ -1,5 +1,5 @@
-# Dev [![CircleCI](https://circleci.com/gh/merlinnot/dev/tree/master.svg?style=svg)](https://circleci.com/gh/merlinnot/dev/tree/master)
-Dev is a fully flavoured development environment based on Docker.
+# Devver [![buddy pipeline](https://app.buddy.works/merlinnot/devver/pipelines/pipeline/39656/badge.svg?token=3a27b0a4c1fe3afde6649e9e0ebfde13bfc76e4b5d5def3c5735f82ee12eac7c "buddy pipeline")](https://app.buddy.works/merlinnot/devver/pipelines/pipeline/39656)
+Devver is a fully flavoured development environment based on Docker.
 Editors of choice are VS Code and Spacemacs which are set up and ready
 to serve you well with all supported languages and frameworks. 
 Carefully selected tools allow you to code, debug and share
@@ -8,15 +8,20 @@ your environment easily.
 ### Quickstart
 ```bash
 $ cd your/project/path
-$ curl -O https://raw.githubusercontent.com/merlinnot/dev/master/docker-compose.yml
+$ curl -O https://raw.githubusercontent.com/merlinnot/devver/master/docker-compose.yml
 $ docker-compose up -d
 $ docker-compose exec dev [command]
 ```
-Aforementioned commands copies latest docker-compose file into your project,
+Aforementioned commands copy latest docker-compose file into your project,
 which should be then redistributed with the project, then it sets up and
 connects you to newly created container. Most of configuration is pushed
 directly to Docker Hub container registry, therefore there's no need to
-update any files in your projects while Dev evolves.
+update any files in your projects while Devver evolves.
+
+To run X11 apps make sure to allow Devver to use your local X11 server:
+```
+$ xhost +local:root
+```
 
 ### Languages
 
