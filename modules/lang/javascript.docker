@@ -10,7 +10,8 @@ RUN npm install -g \
       tern \
       js-beautify \
       eslint \
-      polymer-cli
+      polymer-cli \
+      polymer-analyzer
 
 # Install Yarn
 RUN YARN_VERSION="0.16.1" && \

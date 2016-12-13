@@ -41,3 +41,4 @@ vsext humao rest-client 0.11.0
 vsext robinbentley sass-indented 1.2.1
 vsext cssho vscode-svgviewer 1.2.0
 vsext hoovercj vscode-dimmer 2.1.0
+vsext polymer polymer-ide 0.2.0
