@@ -66,7 +66,6 @@ JavaScript:
 - [JS Beautifier](https://github.com/beautify-web/js-beautify)
 - [ESLint](http://eslint.org)
 - [Yarn](https://github.com/yarnpkg/yarn)
-- [Polymer CLI](https://www.polymer-project.org/)
 
 ### Command line tools and programs
 - [GNU Emacs](https://www.gnu.org/software/emacs/)
@@ -88,6 +87,9 @@ JavaScript:
 - [kubectl](http://kubernetes.io/docs/user-guide/kubectl-overview/)
 - [Ngrok](https://ngrok.com)
 - [The Fuck](https://github.com/nvbn/thefuck)
+- [Firebase CLI](https://github.com/firebase/firebase-tools)
+- [Polymer CLI](https://www.polymer-project.org/)
+
 
 ### X-Apps
 - [Visual Studio Code](https://code.visualstudio.com/)  
@@ -113,8 +115,10 @@ JavaScript:
     - [Sass v1.2.1](https://marketplace.visualstudio.com/items?itemName=robinbentley.sass-indented)
     - [SVG Viewer v1.2.0](https://marketplace.visualstudio.com/items?itemName=cssho.vscode-svgviewer)
     - [VSCode Dimmer v2.1.0](https://marketplace.visualstudio.com/items?itemName=hoovercj.vscode-dimmer)
+    - [Polymer IDE v0.2.0](https://github.com/Polymer/vscode-plugin)
 
-### Tips and tricks
+##
+# Tips and tricks
 - "e" is an alias for Spacemacs, i.e. `e package.json`
 - Use f if you've screwed up and want to use The Fuck
 

@@ -9,9 +9,7 @@ RUN NODE_VERSION="7" && \
 RUN npm install -g \
       tern \
       js-beautify \
-      eslint \
-      polymer-cli \
-      polymer-analyzer
+      eslint
 
 # Install Yarn
 RUN YARN_VERSION="0.16.1" && \

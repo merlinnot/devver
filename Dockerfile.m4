@@ -21,6 +21,8 @@ include(tool/gcloud.docker)
 include(tool/bash.docker)
 include(tool/vscode/vscode.docker)
 include(tool/iosevka.docker)
+include(tool/polymer.docker)
+include(tool/firebase.docker)
 
 # Shrinking image
 include(shrink.docker)

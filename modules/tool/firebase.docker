@@ -1,0 +1,6 @@
+# -*-dockerfile-*-
+
+# Install Firebase CLI
+
+RUN yarn global add \
+      firebase-tools
