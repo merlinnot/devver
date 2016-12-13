@@ -90,7 +90,6 @@ JavaScript:
 - [Firebase CLI](https://github.com/firebase/firebase-tools)
 - [Polymer CLI](https://www.polymer-project.org/)
 
-
 ### X-Apps
 - [Visual Studio Code](https://code.visualstudio.com/)  
   Plugins:  
@@ -117,8 +116,7 @@ JavaScript:
     - [VSCode Dimmer v2.1.0](https://marketplace.visualstudio.com/items?itemName=hoovercj.vscode-dimmer)
     - [Polymer IDE v0.2.0](https://github.com/Polymer/vscode-plugin)
 
-##
-# Tips and tricks
+### Tips and tricks
 - "e" is an alias for Spacemacs, i.e. `e package.json`
 - Use f if you've screwed up and want to use The Fuck
 
