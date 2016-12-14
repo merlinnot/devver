@@ -1,4 +1,7 @@
-# Devver [![buddy pipeline](https://app.buddy.works/merlinnot/devver/pipelines/pipeline/39656/badge.svg?token=3a27b0a4c1fe3afde6649e9e0ebfde13bfc76e4b5d5def3c5735f82ee12eac7c "buddy pipeline")](https://app.buddy.works/merlinnot/devver/pipelines/pipeline/39656)
+# Devver
+[![buddy pipeline](https://app.buddy.works/merlinnot/devver/pipelines/pipeline/39656/badge.svg?token=3a27b0a4c1fe3afde6649e9e0ebfde13bfc76e4b5d5def3c5735f82ee12eac7c "buddy pipeline")](https://app.buddy.works/merlinnot/devver/pipelines/pipeline/39656)
+[![](https://images.microbadger.com/badges/image/merlinnot/devver.svg)](https://microbadger.com/images/merlinnot/devver "Get your own image badge on microbadger.com")
+
 Devver is a fully flavoured development environment based on Docker.
 Editors of choice are VS Code and Spacemacs which are set up and ready
 to serve you well with all supported languages and frameworks. 
