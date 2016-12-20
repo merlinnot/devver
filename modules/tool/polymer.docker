@@ -4,4 +4,5 @@
 
 RUN yarn global add \
       polymer-cli \
-      polymer-analyzer
+      polymer-analyzer \
+      bower
