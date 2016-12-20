@@ -18,11 +18,11 @@ include(lang/javascript.docker)
 include(tool/spacemacs.docker)
 include(tool/thefuck.docker)
 include(tool/gcloud.docker)
+include(tool/polymer.docker)
+include(tool/firebase.docker)
 include(tool/bash.docker)
 include(tool/vscode/vscode.docker)
 include(tool/iosevka.docker)
-include(tool/polymer.docker)
-include(tool/firebase.docker)
 
 # Shrinking image
 include(shrink.docker)
