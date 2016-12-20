@@ -14,7 +14,7 @@ RUN wget https://vscode-update.azurewebsites.net/latest/linux-deb-x64/stable \
 RUN printf "#!/bin/bash\ncode --user-data-dir=/root/.vscode" >> \
       /usr/local/bin/vscode && \
     chmod +x /usr/local/bin/vscode
-COPY modules/tool/vscode/settings.json /root/.vscode/Code/User/settings.json
+COPY modules/tool/vscode/settings.json /root/.vscode/User/settings.json
 COPY modules/tool/vscode/extensions.sh /tmp/extensions.sh
 RUN ["/bin/bash", "-c", "source /tmp/extensions.sh && rm /tmp/extensions.sh"]
 
