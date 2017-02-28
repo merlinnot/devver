@@ -12,5 +12,5 @@ RUN npm install -g \
       eslint
 
 # Install Yarn
-RUN YARN_VERSION="0.16.1" && \
+RUN YARN_VERSION="0.21.3" && \
     npm install --global yarn@${YARN_VERSION}
