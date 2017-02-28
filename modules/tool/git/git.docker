@@ -1,0 +1,7 @@
+# -*-dockerfile-*-
+
+# Copy gitignore file
+COPY modules/tool/git/.gitignore_global /root/.gitignore_global
+
+# Set it as global gitignore file
+RUN git config --global core.excludesfile ~/.gitignore_global

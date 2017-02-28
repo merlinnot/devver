@@ -23,6 +23,7 @@ include(tool/firebase.docker)
 include(tool/bash.docker)
 include(tool/vscode/vscode.docker)
 include(tool/iosevka.docker)
+include(tool/git/git.docker)
 
 # Shrinking image
 include(shrink.docker)
