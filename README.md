@@ -123,6 +123,15 @@ JavaScript:
 - "e" is an alias for Spacemacs, i.e. `e package.json`
 - Use f if you've screwed up and want to use The Fuck
 
+### Update
+To update container run the following commands:
+```
+$ docker pull merlinnot/devver
+$ docker-compose stop
+$ docker-compose rm -f
+```
+From now on newly created containers will be up to date.
+
 ### Development
 Dockerfile is composed of files in `./modules` directory. Composing
 is made using m4 macro processor. All files included in Dockerfile
