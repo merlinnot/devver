@@ -1,0 +1,59 @@
+- pipeline: "Build and deploy"
+  trigger_mode: "ON_EVERY_PUSH"
+  ref_name: "master"
+  actions:
+  - action: "Execute: make dockerfile"
+    type: "BUILD"
+    docker_image_name: "library/ubuntu"
+    docker_image_tag: "16.04"
+    execute_commands:
+    - "make dockerfile"
+    setup_commands:
+    - "apt-get update"
+    - "apt-get install -qq -y make m4"
+  - action: "Build Docker image"
+    type: "DOCKERFILE"
+    login: "merlinnot"
+    password: ${DOCKER_HUB_PASSWORD}
+    docker_image_tag: "latest"
+    dockerfile_path: "Dockerfile"
+    repository: "merlinnot/devver"
+- pipeline: "Rebuild to stay latest and greatest"
+  trigger_mode: "SCHEDULED"
+  ref_name: "master"
+  start_date: "2017-02-28T23:00:00.000Z"
+  delay: 10080
+  run_always: true
+  actions:
+  - action: "Execute: make dockerfile"
+    type: "BUILD"
+    docker_image_name: "library/ubuntu"
+    docker_image_tag: "16.04"
+    execute_commands:
+    - "make dockerfile"
+    setup_commands:
+    - "apt-get update"
+    - "apt-get install -qq -y make m4"
+  - action: "Build Docker image"
+    type: "DOCKERFILE"
+    login: "merlinnot"
+    password: ${DOCKER_HUB_PASSWORD}
+    docker_image_tag: "latest"
+    dockerfile_path: "Dockerfile"
+    repository: "merlinnot/devver"
+- pipeline: "Build"
+  trigger_mode: "ON_EVERY_PUSH"
+  ref_name: "*"
+  actions:
+  - action: "Execute: make dockerfile"
+    type: "BUILD"
+    docker_image_name: "library/ubuntu"
+    docker_image_tag: "16.04"
+    execute_commands:
+    - "make dockerfile"
+    setup_commands:
+    - "apt-get update"
+    - "apt-get install -qq -y make m4"
+  - action: "Build Docker image"
+    type: "DOCKERFILE"
+    dockerfile_path: "Dockerfile"
