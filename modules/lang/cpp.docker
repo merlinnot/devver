@@ -4,7 +4,7 @@ RUN apt-get install -y --no-install-recommends \
       build-essential \
       clang
 RUN BOOST_MAJOR=1 && \
-    BOOST_MINOR=62 && \
+    BOOST_MINOR=63 && \
     BOOST_PATCH=0 && \
     BOOST_BASE_URL="http://sourceforge.net/projects/boost/files/boost/" && \
     BOOST_VERSION_DIR="${BOOST_MAJOR}.${BOOST_MINOR}.${BOOST_PATCH}/" && \
