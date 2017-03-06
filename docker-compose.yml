@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 services:
   dev:
     environment:
@@ -14,3 +14,6 @@ services:
       - .:/code
       - /tmp/.X11-unix:/tmp/.X11-unix
       - ${HOME}/.ssh/id_rsa:/root/.ssh/id_rsa
+    ulimits:
+      nproc: 65535
+      nofile: 524288
