@@ -12,4 +12,7 @@ RUN apt-get -qq update && apt-get -qq upgrade -y -o \
       Dpkg::Options::="--force-confold"
 
 # Increase inotify watchers limit
-RUN sysctl -w fs.inotify.max_user_watches=1048576
+RUN SCRIPT_PATH="/etc/my_init.d/40-inotify-max-user-watchers.sh" && \
+      printf "#\!/bin/sh\n \
+        fs.inotify.max_user_watches=524288 >> /etc/sysctl.conf" > \
+      ${SCRIPT_PATH} && chmod +x ${SCRIPT_PATH} 
