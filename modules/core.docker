@@ -10,3 +10,6 @@ CMD ["/sbin/my_init"]
 # Update image
 RUN apt-get -qq update && apt-get -qq upgrade -y -o \
       Dpkg::Options::="--force-confold"
+
+# Increase inotify watchers limit
+RUN sysctl -w fs.inotify.max_user_watches=1048576
