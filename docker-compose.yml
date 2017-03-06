@@ -1,6 +1,7 @@
 version: '3'
 services:
   dev:
+    privileged: true
     environment:
       - DISPLAY=${DISPLAY}
     image: merlinnot/devver
