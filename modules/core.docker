@@ -10,3 +10,10 @@ CMD ["/sbin/my_init"]
 # Update image
 RUN apt-get -qq update && apt-get -qq upgrade -y -o \
       Dpkg::Options::="--force-confold"
+
+# Increase inotify watchers limit
+RUN SCRIPT_PATH="/etc/my_init.d/40-inotify-max-user-watchers.sh" && \
+      printf "#"'!'"/bin/sh\n \
+        echo \"fs.inotify.max_user_watches=524288\" >> /etc/sysctl.conf\n \
+        sysctl -p\n" > \
+      ${SCRIPT_PATH} && chmod +x ${SCRIPT_PATH} 
