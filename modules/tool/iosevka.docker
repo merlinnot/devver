@@ -1,6 +1,6 @@
 # -*-dockerfile-*-
 
-RUN VERSION="1.9.6" && \
+RUN VERSION="1.12.5" && \
     URL_BASE="https://github.com/be5invis/Iosevka/releases/download/" && \
     wget -q "${URL_BASE}v${VERSION}/01.iosevka-${VERSION}.zip" \
       -O /tmp/iosevka.zip && \
