@@ -1,7 +1,7 @@
 # -*-dockerfile-*-
 
 # Install Go
-RUN GO_VERSION="1.7.3" && \
+RUN GO_VERSION="1.8.1" && \
     GO_BASE_URL="https://storage.googleapis.com/golang/" && \
     wget -q ${GO_BASE_URL}go${GO_VERSION}.linux-amd64.tar.gz && \
     tar -xf go${GO_VERSION}.linux-amd64.tar.gz && \
