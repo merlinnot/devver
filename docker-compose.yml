@@ -5,6 +5,9 @@ services:
     environment:
       - DISPLAY=${DISPLAY}
     image: merlinnot/devver
+    dns:
+      - 8.8.4.4
+      - 8.8.8.8
     ports:
       - "3000:3000"
       - "8080:8080"
