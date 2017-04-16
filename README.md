@@ -36,9 +36,9 @@ $ docker-compose port dev [port_number]
 - Python v3.5.2
 - GNU Compiler Collection v5.4.0 20160609
 - Clang v3.8.0-2ubuntu4
-- Go v1.7.3
-- The Glorious Glasgow Haskell Compilation System v8.0.1
-- Node.js v7.1.0
+- Go v1.8.1
+- The Glorious Glasgow Haskell Compilation System v8.0.2
+- Node.js v7 (current)
 - Perl v5.22.1
 - GNU bash v4.3.46
 
