@@ -5,4 +5,5 @@
 RUN yarn global add \
       polymer-cli \
       polymer-analyzer \
-      bower
+      bower && \
+    echo "{ \"allow_root\": true }" > /root/.bowerrc
