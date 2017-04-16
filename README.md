@@ -26,6 +26,10 @@ To run X11 apps make sure to allow Devver to use your local X11 server:
 $ xhost +local:root
 ```
 
+To check port mapping:
+```
+$ docker-compose port dev [port_number]
+```
 ### Languages
 
 - Python v2.7.12
