@@ -45,7 +45,7 @@ $ docker-compose port dev [port_number]
 ### Frameworks, libraries and language-specific tools
 
 C++:
-- [Boost v1.62.0](http://www.boost.org)
+- [Boost v1.63.0](http://www.boost.org)
 
 Haskell:
 - [Stack](https://docs.haskellstack.org/en/stable/README/)
