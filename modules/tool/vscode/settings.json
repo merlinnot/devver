@@ -1,12 +1,21 @@
 {
+  "dimmer.context": 0,
+  "dimmer.delay": 0,
+  "dimmer.when": "always",
   "editor.cursorBlinking": "phase",
   "editor.cursorStyle": "line",
+  "editor.detectIndentation": false,
+  "editor.fontFamily": "Iosevka",
+  "editor.fontLigatures": true,
   "editor.fontSize": 16,
   "editor.rulers": [80, 120],
   "editor.snippetSuggestions": "top",
   "editor.tabSize": 2,
-  "editor.detectIndentation": false,
   "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
+  "files.associations": {
+    "*.docker": "dockerfile"
+  },
+  "git.confirmSync": false,
   "go.useCodeSnippetsOnFunctionSuggest": true,
   "html.suggest.angular1": false,
   "html.suggest.ionic": false,
@@ -19,13 +28,7 @@
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.openPositioning": "last",
-  "workbench.sideBar.location": "right",
-  "workbench.statusBar.visible": true,
   "workbench.editor.showTabs": false,
-  "dimmer.context": 0,
-  "dimmer.delay": 0,
-  "dimmer.when": "always",
-  "git.confirmSync": false,
-  "editor.fontFamily": "Iosevka",
-  "editor.fontLigatures": true
+  "workbench.sideBar.location": "right",
+  "workbench.statusBar.visible": true
 }

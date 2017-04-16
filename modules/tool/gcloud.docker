@@ -4,13 +4,13 @@
 RUN apt-get install -y --no-install-recommends unzip && \
     wget -q https://dl.google.com/dl/cloudsdk/channels/rapid/google-cloud-sdk.zip && \
     unzip -q google-cloud-sdk.zip && \
-    mv ./google-cloud-sdk ${HOME}/.google-cloud-sdk && \
+    mv ./google-cloud-sdk /root/.google-cloud-sdk && \
     rm -r google-cloud-sdk* && \
-    ${HOME}/.google-cloud-sdk/install.sh \
+    /root/.google-cloud-sdk/install.sh \
       --usage-reporting=true \
       --path-update=true \
       --bash-completion=true \
-      --rc-path=${HOME}/.profile \
+      --rc-path=/root/.bashrc \
       --additional-components \
         app-engine-python \
         app \
