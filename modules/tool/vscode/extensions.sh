@@ -31,7 +31,7 @@ vsext donjayamanne githistory 0.2.0
 vsext eg2 vscode-npm-script 0.1.9
 vsext formulahendry auto-rename-tag 0.0.11
 vsext hoovercj vscode-dimmer 2.1.0
-vsext humao rest-client 0.14.0
+vsext humao rest-client 0.14.1
 vsext jakob101 RelativePath 0.12.0
 vsext naumovs color-highlight 2.0.1
 vsext PeterJausovec vscode-docker 0.0.13

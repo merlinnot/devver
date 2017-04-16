@@ -119,7 +119,7 @@ JavaScript:
     - [React Redux ES6 Snippets v2.0.2](https://marketplace.visualstudio.com/items?itemName=timothymclane.react-redux-es6-snippets)
     - [Reactjs code snippets v1.2.1](https://marketplace.visualstudio.com/items?itemName=xabikos.ReactSnippets)
     - [Relative Path v0.12.0](https://marketplace.visualstudio.com/items?itemName=jakob101.RelativePath)
-    - [REST Client v0.14.0](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
+    - [REST Client v0.14.1](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
     - [Sass v1.3.1](https://marketplace.visualstudio.com/items?itemName=robinbentley.sass-indented)
     - [SVG Viewer v1.4.0](https://marketplace.visualstudio.com/items?itemName=cssho.vscode-svgviewer)
     - [VSCode Dimmer v2.1.0](https://marketplace.visualstudio.com/items?itemName=hoovercj.vscode-dimmer)
