@@ -1,5 +1,6 @@
 # Devver
 [![buddy pipeline](https://app.buddy.works/merlinnot/devver/pipelines/pipeline/45097/badge.svg?token=3a27b0a4c1fe3afde6649e9e0ebfde13bfc76e4b5d5def3c5735f82ee12eac7c "buddy pipeline")](https://app.buddy.works/merlinnot/devver/pipelines/pipeline/45097)
+[![buddy pipeline](https://app.buddy.works/merlinnot/devver/pipelines/pipeline/45098/badge.svg?token=3a27b0a4c1fe3afde6649e9e0ebfde13bfc76e4b5d5def3c5735f82ee12eac7c "buddy pipeline")](https://app.buddy.works/merlinnot/devver/pipelines/pipeline/45098)
 [![](https://images.microbadger.com/badges/image/merlinnot/devver.svg)](https://microbadger.com/images/merlinnot/devver "Get your own image badge on microbadger.com")
 
 Devver is a fully flavoured development environment based on Docker.
