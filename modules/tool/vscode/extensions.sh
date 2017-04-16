@@ -41,3 +41,5 @@ vsext robinbentley sass-indented 1.3.1
 vsext cssho vscode-svgviewer 1.4.0
 vsext hoovercj vscode-dimmer 2.1.0
 vsext polymer polymer-ide 0.5.0
+vsext polymer polymer-ide 0.5.0
+vsext PeterJausovec vscode-docker 0.0.13
