@@ -121,6 +121,7 @@ JavaScript:
     - [SVG Viewer v1.4.0](https://marketplace.visualstudio.com/items?itemName=cssho.vscode-svgviewer)
     - [VSCode Dimmer v2.1.0](https://marketplace.visualstudio.com/items?itemName=hoovercj.vscode-dimmer)
     - [Polymer IDE v0.5.0](https://github.com/Polymer/vscode-plugin)
+    - [Docker v	0.0.13](https://marketplace.visualstudio.com/items?itemName=PeterJausovec.vscode-docker)
 
 ### Tips and tricks
 - "e" is an alias for Spacemacs, i.e. `e package.json`
