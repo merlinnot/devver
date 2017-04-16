@@ -13,7 +13,7 @@ function parse_git_branch() {
   if [ ! "${BRANCH}" == "" ]
   then
     STAT=`parse_git_dirty`
-    echo " [${BRANCH}${STAT}]"
+    echo "[${BRANCH}${STAT}]"
   else
     echo ""
   fi
@@ -54,7 +54,7 @@ function parse_git_dirty {
   fi
 }
 
-export PS1="\[\e[32m\]\t\[\e[m\]\`parse_git_branch\`\[\e[31m\]\`nonzero_return\`\[\e[m\]: "
+export PS1="\[\e[32m\]\t\[\e[m\] | \`hostname -I\`\`parse_git_branch\`\[\e[31m\]\`nonzero_return\`\[\e[m\]: "
 
 ###############################################################################
 # ALIASES
