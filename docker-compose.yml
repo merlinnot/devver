@@ -13,6 +13,7 @@ services:
       - "8000"
       - "8080-8085"
       - "14500"
+    working_dir: /code
     volumes:
       - .:/code
       - /tmp/.X11-unix:/tmp/.X11-unix
