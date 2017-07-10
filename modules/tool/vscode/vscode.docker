@@ -1,3 +1,5 @@
+# -*-dockerfile-*-
+
 # Install Visual Studio Code
 RUN apt-get install -y -qq \
       libasound2 \
@@ -12,7 +14,7 @@ RUN wget https://vscode-update.azurewebsites.net/latest/linux-deb-x64/stable \
       -q -O /tmp/vscode-amd64.deb && \
     dpkg -i /tmp/vscode-amd64.deb && \
     rm /tmp/vscode-amd64.deb
-RUN printf "#!/bin/bash\ncode --user-data-dir=/root/.vscode" >> \
+RUN printf "#!/bin/bash\ncode --user-data-dir=/root/.vscode /code" >> \
       /usr/local/bin/vscode && \
     chmod +x /usr/local/bin/vscode
 COPY modules/tool/vscode/settings.json /root/.vscode/User/settings.json
