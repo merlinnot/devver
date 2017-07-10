@@ -45,7 +45,7 @@
     repository: "merlinnot/devver"
 - pipeline: "Build"
   trigger_mode: "ON_EVERY_PUSH"
-  ref_name: "*"
+  ref_name: "(^(?!.*^(master)$).*)"
   actions:
   - action: "Execute: make dockerfile"
     type: "BUILD"
