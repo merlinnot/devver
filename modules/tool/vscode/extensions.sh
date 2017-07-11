@@ -29,7 +29,7 @@ vsext cssho vscode-svgviewer 1.4.2
 vsext dbaeumer vscode-eslint 1.2.11
 vsext donjayamanne githistory 0.2.1
 vsext eg2 vscode-npm-script 0.2.0
-vsext eg2 tslint 0.2.0
+vsext eg2 tslint 0.16.0
 vsext formulahendry auto-rename-tag 0.0.14
 vsext hoovercj vscode-dimmer 2.1.0
 vsext humao rest-client 0.14.2
