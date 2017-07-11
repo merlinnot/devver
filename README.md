@@ -123,6 +123,7 @@ JavaScript:
     - [REST Client v0.14.2](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
     - [Sass v1.4.1](https://marketplace.visualstudio.com/items?itemName=robinbentley.sass-indented)
     - [SVG Viewer v1.4.2](https://marketplace.visualstudio.com/items?itemName=cssho.vscode-svgviewer)
+    - [TSLint v0.16.0](https://marketplace.visualstudio.com/items?itemName=eg2.tslint)
     - [VSCode Dimmer v2.1.0](https://marketplace.visualstudio.com/items?itemName=hoovercj.vscode-dimmer)
 
 ### Tips and tricks
