@@ -15,5 +15,5 @@ RUN npm install --global \
       typescript   
 
 # Install Yarn
-RUN YARN_VERSION="0.23.2" && \
+RUN YARN_VERSION="0.27.5" && \
     npm install --global yarn@${YARN_VERSION}
