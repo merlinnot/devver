@@ -127,8 +127,8 @@ JavaScript:
     - [VSCode Dimmer v2.1.0](https://marketplace.visualstudio.com/items?itemName=hoovercj.vscode-dimmer)
 
 ### Tips and tricks
-- "e" is an alias for Spacemacs, i.e. `e package.json`
-- Use f if you've screwed up and want to use The Fuck
+- `e` is an alias for Spacemacs, i.e. `e package.json`
+- Use `f` if you've screwed up and want to use The Fuck
 
 ### Update
 To update container run the following commands:
