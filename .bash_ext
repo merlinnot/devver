@@ -70,3 +70,7 @@ alias e=emacs
 
 # Start session in project directory
 cd /code
+
+###############################################################################
+# AUTO_COMPLETION
+eval "$(stack --bash-completion-script stack)"
