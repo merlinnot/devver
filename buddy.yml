@@ -41,7 +41,7 @@
     docker_image_tag: "latest"
     dockerfile_path: "Dockerfile"
     build_args:
-    - "--no-cache"
+    - "version=${execution.start_date}"
     repository: "merlinnot/devver"
 - pipeline: "Build"
   trigger_mode: "ON_EVERY_PUSH"

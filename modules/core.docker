@@ -4,6 +4,10 @@ FROM phusion/baseimage:latest
 
 MAINTAINER Natan Sągol <m@merlinnot.com>
 
+# Set version
+ARG version=custom
+ENV DEVVER_VERSION=${version}
+
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]
 
