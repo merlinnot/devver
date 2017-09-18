@@ -17,6 +17,8 @@
     password: ${DOCKER_HUB_PASSWORD}
     docker_image_tag: "latest"
     dockerfile_path: "Dockerfile"
+    build_args:
+    - "version=${execution.start_date}"
     repository: "merlinnot/devver"
 - pipeline: "Rebuild to stay latest and greatest"
   trigger_mode: "SCHEDULED"
