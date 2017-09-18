@@ -9,7 +9,6 @@ RUN NODE_VERSION="7" && \
 RUN npm install --global \
       eslint \
       gulp-cli \
-      js-beautify \
       tern \
       tslint \
       typescript   
