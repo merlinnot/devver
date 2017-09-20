@@ -21,6 +21,7 @@
     - "version=${execution.start_date}"
     repository: "merlinnot/devver"
 - pipeline: "Rebuild to stay latest and greatest"
+  auto_clear_cache: true
   trigger_mode: "SCHEDULED"
   ref_name: "master"
   start_date: "2017-02-28T23:00:00.000Z"
