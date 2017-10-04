@@ -11,8 +11,5 @@ RUN npm install --global \
       gulp-cli \
       tern \
       tslint \
-      typescript   
-
-# Install Yarn
-RUN YARN_VERSION="0.27.5" && \
-    npm install --global yarn@${YARN_VERSION}
+      typescript \
+      yarn
