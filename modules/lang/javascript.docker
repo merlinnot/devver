@@ -1,7 +1,7 @@
 # -*-dockerfile-*-
 
 # Install Node
-RUN NODE_VERSION="7" && \ 
+RUN NODE_VERSION="8" && \ 
     curl -sL https://deb.nodesource.com/setup_${NODE_VERSION}.x | bash && \
     apt-get install -y --no-install-recommends nodejs
 
