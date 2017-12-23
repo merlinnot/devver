@@ -37,26 +37,12 @@ $ docker-compose port dev [port_number]
 - Python v3.5.2
 - GNU Compiler Collection v5.4.0 20160609
 - Clang v3.8.0-2ubuntu4
-- Go v1.8.1
-- The Glorious Glasgow Haskell Compilation System v8.0.2
-- Node.js v7 (current)
+- Go v1.9.2
+- Node.js v6.11.5 (nvm)
 - Perl v5.22.1
 - GNU bash v4.3.46
 
 ### Frameworks, libraries and language-specific tools
-
-C++:
-- [Boost v1.63.0](http://www.boost.org)
-
-Haskell:
-- [Stack](https://docs.haskellstack.org/en/stable/README/)
-- [apply-refact](https://hackage.haskell.org/package/apply-refact)
-- [hlint](https://hackage.haskell.org/package/hlint)
-- [stylish-haskell](https://hackage.haskell.org/package/stylish-haskell)
-- [hasktags](https://hackage.haskell.org/package/hasktags)
-- [hoogle](https://hackage.haskell.org/package/hoogle)
-- [intero](https://hackage.haskell.org/package/intero)
-- [hindent](https://hackage.haskell.org/package/hindent)
 
 Go:
 - [gocode](https://github.com/nsf/gocode)
@@ -70,7 +56,6 @@ Go:
 - [Goole App Engine package](google.golang.org/appengine)
 
 JavaScript:
-- [Tern](https://ternjs.net)
 - [JS Beautifier](https://github.com/beautify-web/js-beautify)
 - [ESLint](http://eslint.org)
 - [Yarn](https://github.com/yarnpkg/yarn)
@@ -93,7 +78,6 @@ JavaScript:
 - [gcloud Beta Commands](https://cloud.google.com/sdk/)
 - [gcloud app Python Extensions](https://cloud.google.com/sdk/)
 - [kubectl](http://kubernetes.io/docs/user-guide/kubectl-overview/)
-- [Ngrok](https://ngrok.com)
 - [The Fuck](https://github.com/nvbn/thefuck)
 - [Firebase CLI](https://github.com/firebase/firebase-tools)
 - [Polymer CLI](https://www.polymer-project.org/)
@@ -103,27 +87,22 @@ JavaScript:
   Plugins:  
     - [Auto Rename Tag v0.0.14](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
     - [change-case v1.0.0](https://marketplace.visualstudio.com/items?itemName=wmaurer.change-case) 
-    - [Color Highlight v2.2.0](https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight)
-    - [Docker v0.0.16](https://marketplace.visualstudio.com/items?itemName=PeterJausovec.vscode-docker)
-    - [ESLint v1.2.11](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-    - [Git Blame v1.11.3](https://marketplace.visualstudio.com/items?itemName=waderyan.gitblame)
-    - [Git History v0.2.1](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory)
+    - [Color Highlight v2.3.0](https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight)
+    - [Docker v0.0.22](https://marketplace.visualstudio.com/items?itemName=PeterJausovec.vscode-docker)
+    - [ESLint v1.4.3](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+    - [Git Blame v2.2.0](https://marketplace.visualstudio.com/items?itemName=waderyan.gitblame)
+    - [Git History v0.2.3](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory)
     - [gitignore v0.5.0](https://marketplace.visualstudio.com/items?itemName=codezombiech.gitignore)
-    - [Haskelly v0.4.21](https://marketplace.visualstudio.com/items?itemName=UCL.haskelly)
     - [HTML Snippets v0.1.0](https://marketplace.visualstudio.com/items?itemName=abusaidm.html-snippets)
-    - [JavaScript (ES6) snippets v1.4.1](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets)
+    - [JavaScript (ES6) snippets v1.5.0](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets)
     - [JavaScript Snippet pack v0.1.5](https://marketplace.visualstudio.com/items?itemName=akamud.vscode-javascript-snippet-pack)
     - [npm Intellisense v1.3.0](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense)
-    - [npm v0.2.0](https://marketplace.visualstudio.com/items?itemName=eg2.vscode-npm-script)
+    - [npm v0.3.3](https://marketplace.visualstudio.com/items?itemName=eg2.vscode-npm-script)
     - [Path Intellisense v1.4.2](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
-    - [Polymer IDE v0.5.0](https://github.com/Polymer/vscode-plugin)
-    - [React Redux ES6 Snippets v2.0.2](https://marketplace.visualstudio.com/items?itemName=timothymclane.react-redux-es6-snippets)
-    - [Reactjs code snippets v1.4.0](https://marketplace.visualstudio.com/items?itemName=xabikos.ReactSnippets)
-    - [Relative Path v0.12.0](https://marketplace.visualstudio.com/items?itemName=jakob101.RelativePath)
-    - [REST Client v0.14.2](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
-    - [Sass v1.4.1](https://marketplace.visualstudio.com/items?itemName=robinbentley.sass-indented)
-    - [SVG Viewer v1.4.2](https://marketplace.visualstudio.com/items?itemName=cssho.vscode-svgviewer)
-    - [TSLint v0.16.0](https://marketplace.visualstudio.com/items?itemName=eg2.tslint)
+    - [Polymer IDE v0.6.0](https://github.com/Polymer/vscode-plugin)
+    - [Relative Path v1.0.0](https://marketplace.visualstudio.com/items?itemName=jakob101.RelativePath)
+    - [SVG Viewer v1.4.3](https://marketplace.visualstudio.com/items?itemName=cssho.vscode-svgviewer)
+    - [TSLint v1.0.24](https://marketplace.visualstudio.com/items?itemName=eg2.tslint)
     - [VSCode Dimmer v2.1.0](https://marketplace.visualstudio.com/items?itemName=hoovercj.vscode-dimmer)
 
 ### Tips and tricks

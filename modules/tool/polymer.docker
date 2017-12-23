@@ -2,7 +2,8 @@
 
 # Install Polymer CLI and tools
 
-RUN yarn global add \
+RUN . ${HOME}/.nvm/nvm.sh && \
+    yarn global add \
       polymer-cli \
       polymer-analyzer \
       bower && \

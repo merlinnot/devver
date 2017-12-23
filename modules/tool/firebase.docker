@@ -2,6 +2,7 @@
 
 # Install Firebase CLI
 
-RUN yarn global add \
+RUN . ${HOME}/.nvm/nvm.sh && \
+    yarn global add \
       firebase-tools \
       firebase-bolt

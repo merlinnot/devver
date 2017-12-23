@@ -11,6 +11,9 @@ ENV DEVVER_VERSION=${version}
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]
 
+# Replace shell with bash so we can source files
+RUN rm /bin/sh && ln -s /bin/bash /bin/sh
+
 # Update image
 RUN apt-get -qq update && apt-get -qq upgrade -y -o \
       Dpkg::Options::="--force-confold"

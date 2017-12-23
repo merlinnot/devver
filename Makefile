@@ -1,5 +1,5 @@
 NS = merlinnot
-REPO = dev
+REPO = devver
 VERSION ?= latest
 
 .PHONY: dockerfile build push
