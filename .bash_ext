@@ -68,5 +68,9 @@ alias e=emacs
 ###############################################################################
 # DEFAULTS
 
-# Start session in project directory
-cd /code
+# Start session in project directory if it's not being opened in non-root
+# directory
+if [ $(pwd) == '/' ]
+then
+  cd /code
+fi
