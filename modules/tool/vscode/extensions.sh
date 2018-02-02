@@ -31,6 +31,7 @@ vsext dbaeumer vscode-eslint 1.4.3
 vsext donjayamanne githistory 0.2.3
 vsext eg2 tslint 1.0.24
 vsext eg2 vscode-npm-script 0.3.3
+vsext esbenp prettier-vscode 1.1.2
 vsext formulahendry auto-rename-tag 0.0.15
 vsext hoovercj vscode-dimmer 2.1.0
 vsext jakob101 RelativePath 1.0.0
